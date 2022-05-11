@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 42px;
+}
+
+.header .logo {
+  width: 52px;
+  height: 60px;
+}
+
+.header .logo-name {
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff;
+
+  margin-left: 24px;
+}

@@ -12,9 +12,5 @@ export function App() {
     setIsGameStarted(true);
   }
 
-  return (
-    <div className="App">
-      {isGameStarted ? <Game /> : <Home startGame={handleGameStart} />}
-    </div>
-  );
+  return <>{isGameStarted ? <Game /> : <Home startGame={handleGameStart} />}</>;
 }
