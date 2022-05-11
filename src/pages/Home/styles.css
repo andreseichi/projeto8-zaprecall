@@ -1,0 +1,41 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .logo {
+  width: 136px;
+  height: 161px;
+}
+
+.home .logo-name {
+  font-size: 36px;
+  line-height: 45px;
+  color: #fff;
+
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+
+  padding: 16px 0;
+  background-color: #fff;
+  color: #d70900;
+  border: 1px solid #d70900;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  width: 250px;
+  cursor: pointer;
+}
+
+.button:active {
+  filter: brightness(0.9);
+}
