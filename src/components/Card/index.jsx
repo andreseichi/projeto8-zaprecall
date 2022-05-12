@@ -10,7 +10,14 @@ import { Question } from '../Question';
 
 import './styles.css';
 
-export function Card({ question, answer, index, addIcons, addAnswersAmount }) {
+export function Card({
+  question,
+  answer,
+  index,
+  addIcons,
+  addAnswersAmount,
+  handleRedAnswer,
+}) {
   const [isQuestionShowing, setIsQuestionShowing] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [color, setColor] = useState('');
@@ -25,6 +32,7 @@ export function Card({ question, answer, index, addIcons, addAnswersAmount }) {
     if (colorProp === 'red') {
       setIcon(red);
       addIcons(red);
+      handleRedAnswer();
     }
     if (colorProp === 'orange') {
       setIcon(orange);

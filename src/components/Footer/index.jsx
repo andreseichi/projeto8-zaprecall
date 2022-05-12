@@ -1,14 +1,17 @@
+import { Message } from '../Message';
 import './styles.css';
 
-export function Footer({ questionsAmount, answersAmount, icons }) {
+export function Footer({
+  questionsAmount,
+  answersAmount,
+  icons,
+  hasRedAnswer,
+}) {
   return (
     <footer className="footer">
-      <div className="message">
-        <span className="first-message">Parabéns!</span>
-        <span className="second-message">
-          Você não esqueceu de nenhum flashcard!
-        </span>
-      </div>
+      {questionsAmount === answersAmount ? (
+        <Message hasRedAnswer={hasRedAnswer} />
+      ) : null}
 
       <div className="completed">
         <span>

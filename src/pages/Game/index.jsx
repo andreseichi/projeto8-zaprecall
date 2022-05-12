@@ -11,6 +11,7 @@ import './styles.css';
 export function Game() {
   const [answersAmount, setAnswersAmount] = useState(0);
   const [icons, setIcons] = useState([]);
+  const [hasRedAnswer, setHasRedAnswer] = useState(false);
 
   function handleAnswersAmount() {
     setAnswersAmount(answersAmount + 1);
@@ -19,6 +20,10 @@ export function Game() {
   function addIcons(icon) {
     const iconsNewArray = [...icons, icon];
     setIcons(iconsNewArray);
+  }
+
+  function handleRedAnswer() {
+    setHasRedAnswer(true);
   }
 
   return (
@@ -34,6 +39,7 @@ export function Game() {
             answer={question.answer}
             addIcons={addIcons}
             addAnswersAmount={handleAnswersAmount}
+            handleRedAnswer={handleRedAnswer}
           />
         ))}
       </div>
@@ -42,6 +48,7 @@ export function Game() {
         questionsAmount={questions.length}
         answersAmount={answersAmount}
         icons={icons}
+        hasRedAnswer={hasRedAnswer}
       />
     </div>
   );

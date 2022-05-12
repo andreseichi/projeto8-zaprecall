@@ -1,0 +1,29 @@
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-size: 18px;
+  line-height: 22px;
+
+  margin-top: 14px;
+  max-width: 230px;
+}
+
+.message .first-message {
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+}
+
+.message .emoji {
+  margin-right: 12px;
+}
+
+.message .second-message {
+  margin-top: 14px;
+}
