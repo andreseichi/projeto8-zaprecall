@@ -13,6 +13,8 @@ export function Game() {
   const [icons, setIcons] = useState([]);
   const [hasRedAnswer, setHasRedAnswer] = useState(false);
 
+  const questionsShuffled = questions.sort(() => Math.random() - 0.5);
+
   function handleAnswersAmount() {
     setAnswersAmount(answersAmount + 1);
   }
@@ -31,7 +33,7 @@ export function Game() {
       <Header />
 
       <div className="questions">
-        {questions?.map((question, index) => (
+        {questionsShuffled?.map((question, index) => (
           <Card
             key={index}
             index={index + 1}
