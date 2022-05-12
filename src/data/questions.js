@@ -15,4 +15,8 @@ export const questions = [
     question: 'Podemos colocar __ dentro do JSX',
     answer: 'expressões',
   },
+  {
+    question: 'O ReactDOM nos ajuda __',
+    answer: 'interagindo com a DOM para colocar componentes React na mesma',
+  },
 ];
