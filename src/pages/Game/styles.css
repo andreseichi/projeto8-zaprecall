@@ -6,6 +6,8 @@
   justify-content: flex-start;
 
   position: relative;
+
+  padding-bottom: 100px;
 }
 
 .game .questions {
