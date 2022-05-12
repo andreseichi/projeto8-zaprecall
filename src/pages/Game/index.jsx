@@ -8,12 +8,12 @@ import { questions } from '../../data/questions';
 
 import './styles.css';
 
+const questionsShuffled = questions.sort(() => Math.random() - 0.5);
+
 export function Game({ resetGame }) {
   const [answersAmount, setAnswersAmount] = useState(0);
   const [icons, setIcons] = useState([]);
   const [hasRedAnswer, setHasRedAnswer] = useState(false);
-
-  const questionsShuffled = questions.sort(() => Math.random() - 0.5);
 
   function handleAnswersAmount() {
     setAnswersAmount(answersAmount + 1);
