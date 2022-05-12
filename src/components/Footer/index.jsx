@@ -1,8 +1,6 @@
-import icon from '../../assets/images/red.svg';
-
 import './styles.css';
 
-export function Footer() {
+export function Footer({ questionsAmount, answersAmount, icons }) {
   return (
     <footer className="footer">
       <div className="message">
@@ -13,9 +11,13 @@ export function Footer() {
       </div>
 
       <div className="completed">
-        <span>1/4 concluídos</span>
+        <span>
+          {answersAmount}/{questionsAmount} concluídos
+        </span>
         <div className="icons">
-          <img src={icon} alt="" />
+          {icons?.map((icon, index) => (
+            <img src={icon} alt="" className="icon" key={index} />
+          ))}
         </div>
       </div>
     </footer>

@@ -1,12 +1,26 @@
+import { useState } from 'react';
+
 import { Header } from '../../components/Header';
+import { Card } from '../../components/Card';
 import { Footer } from '../../components/Footer';
 
 import { questions } from '../../data/questions';
 
 import './styles.css';
-import { Card } from '../../components/Card';
 
 export function Game() {
+  const [answersAmount, setAnswersAmount] = useState(0);
+  const [icons, setIcons] = useState([]);
+
+  function handleAnswersAmount() {
+    setAnswersAmount(answersAmount + 1);
+  }
+
+  function addIcons(icon) {
+    const iconsNewArray = [...icons, icon];
+    setIcons(iconsNewArray);
+  }
+
   return (
     <div className="game">
       <Header />
@@ -18,11 +32,16 @@ export function Game() {
             index={index + 1}
             question={question.question}
             answer={question.answer}
+            addIcons={addIcons}
           />
         ))}
       </div>
 
-      <Footer />
+      <Footer
+        questionsAmount={questions.length}
+        answersAmount={answersAmount}
+        icons={icons}
+      />
     </div>
   );
 }
