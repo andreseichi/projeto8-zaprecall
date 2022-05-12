@@ -32,3 +32,21 @@
 .footer .icons .icon + .icon {
   margin-left: 5px;
 }
+
+.restart-btn {
+  border: none;
+  border-radius: 5px;
+  background-color: #fb6b6b;
+  text-transform: uppercase;
+
+  color: #fff;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+
+  padding: 8px 20px;
+
+  margin-top: 24px;
+  margin-bottom: 22px;
+  cursor: pointer;
+}

@@ -24,3 +24,7 @@ button.orange-btn {
 button.green-btn {
   background-color: #2fbe34;
 }
+
+button:active {
+  filter: brightness(0.9);
+}

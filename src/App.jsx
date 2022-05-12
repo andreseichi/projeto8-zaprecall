@@ -12,5 +12,17 @@ export function App() {
     setIsGameStarted(true);
   }
 
-  return <>{isGameStarted ? <Game /> : <Home startGame={handleGameStart} />}</>;
+  function resetGame() {
+    setIsGameStarted(false);
+  }
+
+  return (
+    <>
+      {isGameStarted ? (
+        <Game resetGame={resetGame} />
+      ) : (
+        <Home startGame={handleGameStart} />
+      )}
+    </>
+  );
 }

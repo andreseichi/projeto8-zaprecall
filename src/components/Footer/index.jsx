@@ -1,4 +1,5 @@
 import { Message } from '../Message';
+
 import './styles.css';
 
 export function Footer({
@@ -6,6 +7,7 @@ export function Footer({
   answersAmount,
   icons,
   hasRedAnswer,
+  resetGame,
 }) {
   return (
     <footer className="footer">
@@ -23,6 +25,12 @@ export function Footer({
           ))}
         </div>
       </div>
+
+      {questionsAmount === answersAmount ? (
+        <button className="restart-btn" onClick={resetGame}>
+          Reiniciar Recall
+        </button>
+      ) : null}
     </footer>
   );
 }

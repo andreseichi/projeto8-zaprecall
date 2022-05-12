@@ -8,7 +8,7 @@ import { questions } from '../../data/questions';
 
 import './styles.css';
 
-export function Game() {
+export function Game({ resetGame }) {
   const [answersAmount, setAnswersAmount] = useState(0);
   const [icons, setIcons] = useState([]);
   const [hasRedAnswer, setHasRedAnswer] = useState(false);
@@ -51,6 +51,7 @@ export function Game() {
         answersAmount={answersAmount}
         icons={icons}
         hasRedAnswer={hasRedAnswer}
+        resetGame={resetGame}
       />
     </div>
   );
