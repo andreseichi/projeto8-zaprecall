@@ -1,0 +1,26 @@
+.answer-btn {
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  text-align: center;
+
+  border: none;
+
+  min-height: 35px;
+  width: 100%;
+
+  cursor: pointer;
+}
+
+button.red-btn {
+  background-color: #ff3030;
+}
+
+button.orange-btn {
+  background-color: #ff922e;
+}
+
+button.green-btn {
+  background-color: #2fbe34;
+}

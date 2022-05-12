@@ -1,4 +1,4 @@
-import icon from '../../assets/images/x.svg';
+import icon from '../../assets/images/red.svg';
 
 import './styles.css';
 
