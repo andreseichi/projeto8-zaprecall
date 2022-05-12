@@ -33,6 +33,7 @@ export function Game() {
             question={question.question}
             answer={question.answer}
             addIcons={addIcons}
+            addAnswersAmount={handleAnswersAmount}
           />
         ))}
       </div>
